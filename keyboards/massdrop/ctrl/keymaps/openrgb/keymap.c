@@ -14,7 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include QMK_KEYBOARD_H
+#include "keymap.h"
+
+
 
 enum ctrl_keycodes {
     U_T_AUTO = SAFE_RANGE, //USB Extra Port Toggle Auto Detect / Always Active
@@ -27,6 +29,7 @@ enum ctrl_keycodes {
 };
 
 keymap_config_t keymap_config;
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
@@ -57,9 +60,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
 };
 
+
+
 // Runs just one time when the keyboard initializes.
 void matrix_init_user(void) {
 };
+
+
 
 // Runs constantly in the background, in a loop.
 void matrix_scan_user(void) {
@@ -142,3 +149,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true; //Process all other keycodes normally
     }
 }
+

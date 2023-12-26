@@ -18,13 +18,18 @@
 #    error "RAW_ENABLE is not enabled"
 #endif
 
+
+#include KEYMAP_C
+
+
 #include "version.h"
 #include "quantum.h"
-#include "keymap.h"
 #include "openrgb.h"
 #include "raw_hid.h"
 #include "string.h"
 #include <color.h>
+
+
 
 #if !defined(OPENRGB_DIRECT_MODE_STARTUP_RED)
 #    define OPENRGB_DIRECT_MODE_STARTUP_RED 0
