@@ -17,21 +17,7 @@
 #include "keymap.h"
 
 
-
-enum ctrl_keycodes {
-    U_T_AUTO = SAFE_RANGE, //USB Extra Port Toggle Auto Detect / Always Active
-    U_T_AGCR,              //USB Toggle Automatic GCR control
-    DBG_TOG,               //DEBUG Toggle On / Off
-    DBG_MTRX,              //DEBUG Toggle Matrix Prints
-    DBG_KBD,               //DEBUG Toggle Keyboard Prints
-    DBG_MOU,               //DEBUG Toggle Mouse Prints
-    MD_BOOT,               //Restart into bootloader after hold timeout
-};
-
-keymap_config_t keymap_config;
-
-
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+const uint15_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =  {
     [0] = LAYOUT(
         KC_ESC,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,             KC_PSCR, KC_SCROLL_LOCK, KC_PAUS, \
         KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,   KC_INS,  KC_HOME, KC_PGUP, \
@@ -61,7 +47,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-
 // Runs just one time when the keyboard initializes.
 void matrix_init_user(void) {
 };
@@ -72,9 +57,6 @@ void matrix_init_user(void) {
 void matrix_scan_user(void) {
 };
 
-#define MODS_SHIFT  (get_mods() & MOD_MASK_SHIFT)
-#define MODS_CTRL   (get_mods() & MOD_MASK_CTRL)
-#define MODS_ALT    (get_mods() & MOD_MASK_ALT)
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     static uint32_t key_timer;

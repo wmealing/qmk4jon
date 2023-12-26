@@ -1,3 +1,2 @@
 OPENRGB_ENABLE = yes
 VIA_ENABLE = no
-# INTROSPECTION_KEYMAP_C = keymap.c 

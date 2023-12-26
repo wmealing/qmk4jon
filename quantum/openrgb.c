@@ -14,12 +14,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <stdint.h>
+
 #ifndef RAW_ENABLE
 #    error "RAW_ENABLE is not enabled"
 #endif
 
+// #include KEYMAP_C
 
-#include KEYMAP_C
+#include "./keyboards/massdrop/ctrl/keymaps/openrgb/keymap.h" 
+
+
+extern const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS];
+
 
 
 #include "version.h"
