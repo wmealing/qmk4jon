@@ -3,7 +3,7 @@
 
 // Pull the actual keymap code so that we can inspect stuff from it
 //#include KEYMAP_C
-#include "keyboards/massdrop/ctrl/keymaps/openrgb/keymap.h" 
+#include "keyboards/jckb/keymaps/openrgb/keymap.h" 
 
 // Allow for keymap or userspace rules.mk to specify an alternate location for the keymap array
 #ifdef INTROSPECTION_KEYMAP_C
@@ -12,7 +12,7 @@
 
 #include "keymap_introspection.h"
 
-const uint16_t PROGMEM keymaps[2][MATRIX_ROWS][MATRIX_COLS];
+const uint16_t PROGMEM keymaps[4][MATRIX_ROWS][MATRIX_COLS];
 
 
 
