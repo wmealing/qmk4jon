@@ -12,11 +12,11 @@ bool OPENRGB_DIRECT(effect_params_t* params) {
         #ifdef OPENRGB_DIRECT_MODE_USE_UNIVERSAL_BRIGHTNESS
         float brightness = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
 
-        xprintf("ORGBDIRECT univeral: i(%d) RGB(%d %d %d)\n" i,
+        xprintf("ORGBDIRECT univeral: i(%d) RGB(%d %d %d)\n", i,
                 brightness * g_openrgb_direct_mode_colors[i].r,
                 brightness * g_openrgb_direct_mode_colors[i].g,
                 brightness * g_openrgb_direct_mode_colors[i].b,
-                )
+                );
 
         rgb_matrix_set_color(
             i,
@@ -26,11 +26,11 @@ bool OPENRGB_DIRECT(effect_params_t* params) {
         );
         #else
 
-        xprintf("ORGBDIRECT non-univeral: i(%d) RGB(%d %d %d)\n" i,
+        xprintf("ORGBDIRECT non-univeral: i(%d) RGB(%d %d %d)\n", i,
                 brightness * g_openrgb_direct_mode_colors[i].r,
                 brightness * g_openrgb_direct_mode_colors[i].g,
                 brightness * g_openrgb_direct_mode_colors[i].b,
-                )
+                );
 
         rgb_matrix_set_color(
             i,
