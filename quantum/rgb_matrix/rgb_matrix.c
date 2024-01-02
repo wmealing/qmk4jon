@@ -27,9 +27,6 @@
 #include <math.h>
 #include <stdlib.h>
 
-#include "print.h" // for debugging.
-
-
 #include <lib/lib8tion/lib8tion.h>
 
 #ifndef RGB_MATRIX_CENTER
