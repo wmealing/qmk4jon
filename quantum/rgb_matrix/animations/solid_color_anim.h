@@ -1,8 +1,12 @@
 RGB_MATRIX_EFFECT(SOLID_COLOR)
 #ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
+#include "print.h"
+
 bool SOLID_COLOR(effect_params_t* params) {
     RGB_MATRIX_USE_LIMITS(led_min, led_max);
+
+    xprintf("** hello from SOLID_COLOR\n");
 
     RGB rgb = rgb_matrix_hsv_to_rgb(rgb_matrix_config.hsv);
     for (uint8_t i = led_min; i < led_max; i++) {
