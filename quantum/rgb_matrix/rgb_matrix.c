@@ -208,7 +208,7 @@ void rgb_matrix_update_pwm_buffers(void) {
 }
 
 void rgb_matrix_set_color(int index, uint8_t red, uint8_t green, uint8_t blue) {
-  xprintf("** In RGB_MATRIX_SET_COLOR, setting index: %d\n" , index );
+  xprintf("** In RGB_MATRIX_SET_COLOR, setting index: %d to (R:%d G: %d B:%d)\n", index , red, green, blue);
   rgb_matrix_driver.set_color(index, red, green, blue);
 }
 
