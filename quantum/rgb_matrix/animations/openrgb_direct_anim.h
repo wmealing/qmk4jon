@@ -27,9 +27,9 @@ bool OPENRGB_DIRECT(effect_params_t* params) {
         #else
 
         xprintf("ORGBDIRECT non-univeral: i(%d) RGB(%d %d %d)\n", i,
-                brightness * g_openrgb_direct_mode_colors[i].r,
-                brightness * g_openrgb_direct_mode_colors[i].g,
-                brightness * g_openrgb_direct_mode_colors[i].b,
+                g_openrgb_direct_mode_colors[i].r,
+                g_openrgb_direct_mode_colors[i].g,
+                g_openrgb_direct_mode_colors[i].b,
                 );
 
         rgb_matrix_set_color(
