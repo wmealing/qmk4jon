@@ -27,6 +27,9 @@
 #include <math.h>
 #include <stdlib.h>
 
+#include "print.h" // for debugging.
+
+
 #include <lib/lib8tion/lib8tion.h>
 
 #ifndef RGB_MATRIX_CENTER
@@ -205,7 +208,8 @@ void rgb_matrix_update_pwm_buffers(void) {
 }
 
 void rgb_matrix_set_color(int index, uint8_t red, uint8_t green, uint8_t blue) {
-    rgb_matrix_driver.set_color(index, red, green, blue);
+  xprintf("** In RGB_MATRIX_SET_COLOR, setting index: %d\n" , index );
+  rgb_matrix_driver.set_color(index, red, green, blue);
 }
 
 void rgb_matrix_set_color_all(uint8_t red, uint8_t green, uint8_t blue) {
